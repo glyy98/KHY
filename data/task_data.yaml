@@ -1,0 +1,14 @@
+
+
+
+addtask:
+  "taskType": 3,   #维修
+  "deviceDynamicInfoId": [ "495096115801096261"],  #设备小类
+  "maintenanceContent": "调用测试",   #检修内容
+  "maintenanceMethods": "",
+  "maintenanceStandards": "",
+  "maintenanceTime": "2024-07-03 00:00:00",  #检修时间
+  "leader": ["558143240922988613"],  #负责人
+  "taskStatus": 1,   #进行中
+  "craneId": "421471904994426949",   #起重机id
+  "remark": ""   #自定义设备

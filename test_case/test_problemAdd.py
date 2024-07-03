@@ -1,6 +1,6 @@
 import requests
 import pytest
-from test_login import login
+from test_case.test_login import login
 
 @pytest.fixture
 def token():

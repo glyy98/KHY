@@ -1,0 +1,13 @@
+
+
+#缩进为两个空格
+login:
+  base_url:'https://dev.mhiiot.cn/openapi/client/api'
+  endpoint:'/login'
+  payload:
+    username:'superadmin'
+    password:'123456'
+  headers:
+    Content-Type:'application/json'
+
+    
