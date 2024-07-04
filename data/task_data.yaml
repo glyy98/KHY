@@ -1,14 +1,20 @@
 
+task_data:
+  task_url: 'https://dev.mhiiot.cn/openapi/client/api/TaskTable/add'
+  headers:
+    Content-Type: 'application/json'
+  addtask:
+    taskType: 2  # 维修
+    deviceDynamicInfoId: ['495096115801096261']  # 设备小类
+    maintenanceContent: '接口生成'  # 检修内容
+    maintenanceMethods: '接口生成'
+    maintenanceStandards: '接口生成'
+    maintenanceTime: '2024-07-05 00:00:00'  # 检修时间
+    leader: ['558143240922988613']  # 负责人
+    taskStatus: 1  # 进行中
+    craneId: '578426561737261125'  # 起重机id
+    remark: ''  # 自定义设备
 
 
-addtask:
-  "taskType": 3,   #维修
-  "deviceDynamicInfoId": [ "495096115801096261"],  #设备小类
-  "maintenanceContent": "调用测试",   #检修内容
-  "maintenanceMethods": "",
-  "maintenanceStandards": "",
-  "maintenanceTime": "2024-07-03 00:00:00",  #检修时间
-  "leader": ["558143240922988613"],  #负责人
-  "taskStatus": 1,   #进行中
-  "craneId": "421471904994426949",   #起重机id
-  "remark": ""   #自定义设备
+    
+

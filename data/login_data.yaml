@@ -1,13 +1,10 @@
+#缩进为两个空格   键值之间需要空格    
 
-
-#缩进为两个空格
-login:
-  base_url:'https://dev.mhiiot.cn/openapi/client/api'
-  endpoint:'/login'
+login_data:  # 顶层键 表示一个分组
+  loginAPI: 'https://dev.mhiiot.cn/openapi/client/api/login'
   payload:
-    username:'superadmin'
-    password:'123456'
+    username: 'superadmin'
+    password: '123456'
   headers:
-    Content-Type:'application/json'
+    Content-Type: 'application/json'
 
-    

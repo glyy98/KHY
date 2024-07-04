@@ -1,41 +1,29 @@
 import pytest
 import requests
 import yaml 
-from test_case.test_login import login
-
-
-@pytest.fixture    #装饰器核心在于减少重复代码，调用登录函数返回token
-def token():
-    return login()
-
+import allure
+from test_login import login
 
 def load_yaml(file_path):     
     with open (file_path,'r',encoding='utf-8') as file :
         return yaml.safe_load(file)
     
 
-def test_addtask(token):
-    base_url='https://dev.mhiiot.cn/openapi/project/api'   #基础地址
-    add_task_url=f'{base_url}/TaskTable/add'  #基础地址+接口路径
+@pytest.fixture    #装饰器核心在于减少重复代码，调用登录函数返回token
+def token():
+    return login()
 
-    headers={'Content-Type':'application/json',
-             'Authorization':f'Bearer {token}'}  #这个Bearer在加token时需要空格
-    #传参
-  #   task_data={
-  # "taskType": 3,   #维修
-  # "deviceDynamicInfoId": [ "495096115801096261"],  #设备小类
-  # "maintenanceContent": "调用测试",   #检修内容
-  # "maintenanceMethods": "",
-  # "maintenanceStandards": "",
-  # "maintenanceTime": "2024-07-03 00:00:00",  #检修时间
-  # "leader": ["558143240922988613"],  #负责人
-  # "taskStatus": 1,   #进行中
-  # "craneId": "421471904994426949",   #起重机id
-  # "remark": ""   }#自定义设备
-
-    task_data=load_yaml('data/task_data.yaml')["addtask"]
+def test_addtask(token):   
     
-    response=requests.post(add_task_url,json=task_data,headers=headers)
+    #先将任务所有的值拿过来，引入顶层键
+    task_data=load_yaml('../data/task_data.yaml')['task_data']  
+    task_url=task_data['task_url']
+    headers = {**task_data['headers'], 'Authorization': f'Bearer {token}'}  #组装请求头，这个Bearer在加token时需要空格
+    addtask=task_data['addtask']   #新增任务时所传的参数
+    print(f'任务数据{task_data}')
+
+    
+    response=requests.post(task_url,json=addtask,headers=headers)  #组装请求参数
     #校验响应数据的状态码是否为200，否则输出提示
     assert response.status_code==200,f'添加任务失败,{response.text}'
 
