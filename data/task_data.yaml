@@ -14,6 +14,7 @@ task_data:
     taskStatus: 1  # 进行中
     craneId: '578426561737261125'  # 起重机id
     remark: ''  # 自定义设备
+  
 
 
     
