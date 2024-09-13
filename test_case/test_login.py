@@ -13,7 +13,7 @@ def load_yaml(file_path):     #定义一个函数，传参数file_path
 @allure.severity(allure.severity_level.BLOCKER)
 #登录函数
 def login():   
-    login_data=load_yaml('../data/login_data.yaml')['login_data']  #获取登录参数yaml地址，获取顶层键
+    login_data=load_yaml('./data/login_data.yaml')['login_data']  #获取登录参数yaml地址，获取顶层键
     login_url=login_data['loginAPI']  #登录API  再从顶层键中拿键值对
     zhanghao=login_data['payload']    #账号密码
     headers=login_data['headers']     #请求头

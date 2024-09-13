@@ -18,7 +18,7 @@ def token():
 def test_addtask(token):   
     
     #先将任务所有的值拿过来，引入顶层键
-    task_data=load_yaml('../data/task_data.yaml')['task_data']  
+    task_data=load_yaml('./data/task_data.yaml')['task_data']  
     task_url=task_data['task_url']
     headers = {**task_data['headers'], 'Authorization': f'Bearer {token}'}  #组装请求头，这个Bearer在加token时需要空格
     addtask=task_data['addtask']   #新增任务时所传的参数
@@ -34,5 +34,7 @@ def test_addtask(token):
     assert response_data['isSuccess']==True,f'添加任务失败,{response.text}'
 
   
+# pytest .\test_case\test_addtast.py  --alluredir=./allure-results
+
 
 

@@ -1,8 +1,8 @@
 #缩进为两个空格   键值之间需要空格    
 
 login_data:  # 顶层键 表示一个分组
-  # loginAPI: 'https://dev.mhiiot.cn/openapi/client/api/login'
-  loginAPI: 'http://localhost:8848/#/login'
+  loginAPI: 'https://dev.mhiiot.cn/openapi/client/api/login'
+  # loginAPI: 'http://localhost:8848/#/login'
 
   payload:
     username: 'superadmin'

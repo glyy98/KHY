@@ -5,14 +5,14 @@ task_data:
     Content-Type: 'application/json'
   addtask:
     taskType: 2  # 维修
-    deviceDynamicInfoId: ['495096115801096261']  # 设备小类
+    deviceDynamicInfoId: ['496151162496483397']  # 设备小类
     maintenanceContent: '接口生成'  # 检修内容
     maintenanceMethods: '接口生成'
     maintenanceStandards: '接口生成'
-    maintenanceTime: '2024-07-05 00:00:00'  # 检修时间
-    leader: ['558143240922988613']  # 负责人
+    maintenanceTime: '2024-10-05 00:00:00'  # 检修时间
+    leader: ['591481358241497157']  # 负责人
     taskStatus: 1  # 进行中
-    craneId: '578426561737261125'  # 起重机id
+    craneId: '496151162496483397'  # 起重机id
     remark: ''  # 自定义设备
   
 
