@@ -1,2 +1,0 @@
-任务数据{'task_url': 'https://dev.mhiiot.cn/openapi/client/api/TaskTable/add', 'headers': {'Content-Type': 'application/json'}, 'addtask': {'taskType': 2, 'deviceDynamicInfoId': ['496151162496483397'], 'maintenanceContent': '接口生成', 'maintenanceMethods': '接口生成', 'maintenanceStandards': '接口生成', 'maintenanceTime': '2024-10-05 00:00:00', 'leader': ['591481358241497157'], 'taskStatus': 1, 'craneId': '496151162496483397', 'remark': ''}}
-{'statusCode': 200, 'data': '', 'errorMessage': '', 'mD5': 'd41d8cd98f00b204e9800998ecf8427e', 'isSuccess': True, 'timestamp': '1726211505'}

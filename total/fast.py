@@ -6,7 +6,7 @@ import time
 
 def allure_report():   #在控制台执行allure的命令  
     # 运行测试用例，将报告结果存储到指定目录
-    os.system('pytest test_case/test_addtast.py --alluredir ./report/result ')
+    os.system('pytest test_case/test_addtast.py --alluredir ./report/result  ')
     # 生成 Allure 报告，生成一次就清除覆盖之前的
     os.system('allure generate report/result/ -o report/html --clean')
     # 忽略 localhost 和 127.0.0.1 的代理

@@ -8,13 +8,13 @@ def load_yaml(file_path):
     with open (file_path,'r',encoding='utf-8') as file :
         return yaml.safe_load(file)
     
-
+@allure.title("引用登录用例")
 @pytest.fixture    #装饰器核心在于减少重复代码，调用登录函数返回token
 def token():
     return login()
 
 
-
+@allure.title("测试新增任务功能（任务看板）")  #给用例定义标题
 def test_addtask(token):   
     
     #先将任务所有的值拿过来，引入顶层键
